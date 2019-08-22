@@ -1,42 +1,50 @@
 
 
-function changeElements(className){
+function changeElements(convert){
     
-    let convert = $(className).text();
-    console.log(convert);
-    if( convert === 'one'){
-        return convert = 1
+    $(convert).each(function(){
+    let current = $(this);
+    if( current.text() === 'one'){
+        return current.text(1);
     }
-    if( convert === 'two'){
-        return convert = 2;
+    else if( current.text() === 'two'){
+        return current.text(2);
     }
-    if( convert === 'three'){
-        return convert = 3;
+    else if( current.text() === 'three'){
+        return current.text(3);
     }
-    if( convert === 'four'){
-        return convert = 4;
+    else if( current.text() === 'four'){
+        return current.text(4);
     }
-    if( convert === 'five'){
-        return convert = 5;
+    else if( current.text() === 'five'){
+        return current.text(5);
     }
-    if( convert === 'six'){
-        return convert = 6;
+    else if( current.text() === 'six'){
+        return current.text(6);;
     }
-    if( convert === 'seven'){
-        return convert = 7;
+    else if( current.text() === 'seven'){
+        return current.text(7);
     }
-    if( convert === 'eight'){
-        return convert = 8;
+    else if( current.text() === 'eight'){
+        return current.text(8);
     }
-    if( convert === 'nine'){
-        return convert = 9;
+    else if( current.text() === 'nine'){
+        return current.text(9);
     }
-    return convert;
+    else {
+        return undefined;
     
+    }
+    });
+
 }
 
-function appendTextToElement(){
-
+function appendTextToElement(selector, appendText){
+    $(selector).each(function(){
+        let current = $(this);
+        let currentText = current.text();
+        return current.text(currentText + appendText);
+    })
 }
 
 function addClass(){
