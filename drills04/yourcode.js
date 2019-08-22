@@ -47,10 +47,19 @@ function appendTextToElement(selector, appendText){
     })
 }
 
-function addClass(){
+function addClass(str1, str2){
+    let eleChangeCount = 0;
+    $(str1).each(function(){
+        let current = $(this);
+        current.addClass(str2);
+        eleChangeCount++;
+        return;
+        
+    });
+    return eleChangeCount;
 }
 
-function removeElements(){
-
+function removeElements(selector){
+    $(selector).remove();
 }
 
