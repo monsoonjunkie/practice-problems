@@ -2,7 +2,6 @@ function sort(arr){
     const oddArr = [];
     const evenArr = [];
     const cleanArr = [];
-    let sameNum;
     for(let i = 0; i < arr.length; i++){
         if(typeof arr[i] === 'number' && !cleanArr.includes(arr[i])){
             cleanArr.push(arr[i]);
