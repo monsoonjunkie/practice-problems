@@ -35,5 +35,4 @@ function fittingWords(str, arr){
     }
     return newArr;
 }
-var myArray = ['cat','caterpillar','whale','accurate','smile','cactus','cute']
-fittingWords('ccat', myArray)
+
