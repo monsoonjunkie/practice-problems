@@ -6,7 +6,7 @@ function permutations(str){
         let restStrArray = restStr.split('');
         
         for(let y = 0; y < restStrArray.length; y++){
-            console.log(restStrArray)
+
             permutation.push(firstChar + restStrArray.join(''));
             restStrArray.unshift(restStrArray.pop());
         }
